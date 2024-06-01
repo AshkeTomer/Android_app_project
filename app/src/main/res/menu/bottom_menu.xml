@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_calories"
+        android:icon="@drawable/calorie_icon"
+        android:title="Calories"/>
+
+    <item
+        android:id="@+id/bottom_training"
+        android:icon="@drawable/training_icon"
+        android:title="Training"/>
+
+    <item
+        android:id="@+id/bottom_weather"
+        android:icon="@drawable/weather_icon"
+        android:title="Weather"/>
+    <item
+        android:id="@+id/bottom_database"
+        android:icon="@drawable/database_icon"
+        android:title="Database"/>
+</menu>
