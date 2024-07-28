@@ -7,14 +7,120 @@
     android:layout_height="match_parent"
     tools:context=".CaloriesActivity">
 
-    <TextView
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calories"
-        android:textSize="36dp"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="122dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="331dp"
+        android:progress="25"
+        app:indicatorColor="@color/teal_200"
+        app:indicatorSize="160dp"
+        app:trackColor="@color/lavender"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="16dp" />
+
+    <TextView
+        android:id="@+id/current_Count"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/progress_bar"
+        android:layout_alignTop="@+id/progress_bar"
+        android:layout_alignEnd="@+id/progress_bar"
+        android:layout_alignBottom="@+id/progress_bar"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:text="295"
+        android:textColor="@color/teal_200"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/overall_Count"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/progress_bar"
+        android:layout_alignTop="@+id/progress_bar"
+        android:layout_alignEnd="@+id/progress_bar"
+        android:layout_alignBottom="@+id/progress_bar"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="295"
         android:textColor="@color/lavender"
-        android:layout_centerInParent="true"/>
-        
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etCurrentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:hint="Enter updated calories :"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnUpdateCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="230dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="200dp"
+        android:background="@color/teal_200"
+        android:onClick="getCurrentCalories"
+        android:text="Update current calories"
+        android:textColor="@color/purple_500"
+        app:backgroundTint="@null" />
+
+    <EditText
+        android:id="@+id/etTotalCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="140dp"
+        android:ems="10"
+        android:hint="Enter total calories :"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnUpdateTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_marginStart="230dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="140dp"
+        android:background="@color/teal_200"
+        android:onClick="getTotalCalories"
+        android:text="Update total calories"
+        android:textColor="@color/purple_500"
+        app:backgroundTint="@null" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
